@@ -14,3 +14,18 @@ The general format :
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## Install the terraform CLI
+
+Terraform installation instructions changed due to gpg keyring changes. The new install uses scripting instructions from the Terraform CLI install page. 
+
+[Install Terraform CLI] https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://www.gitpod.io/docs/configure/workspaces/tasks
+https://en.wikipedia.org/wiki/Chmod
+
+### Refactoring into bash scripts.
+While fixing the terraform CLI gpg depreciation, we decided to use a bash script for the terraform CLI installation. 
+
+### Considerations for Linux Distribution.
+This project is bulilt against Ubuntu.
+Please consider checking your Linux distribution and change according to distribution needs.
+
