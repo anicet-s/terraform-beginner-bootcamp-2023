@@ -29,3 +29,8 @@ While fixing the terraform CLI gpg depreciation, we decided to use a bash script
 This project is bulilt against Ubuntu.
 Please consider checking your Linux distribution and change according to distribution needs.
 
+### Working with Env Vars
+
+List all variables  using `env` command.
+We can filter  using grep. eg `env | grep AWS`
+
