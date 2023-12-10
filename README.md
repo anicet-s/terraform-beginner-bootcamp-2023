@@ -34,3 +34,13 @@ Please consider checking your Linux distribution and change according to distrib
 List all variables  using `env` command.
 We can filter  using grep. eg `env | grep AWS`
 
+### AWS CLI Installation
+
+AWS CLI installed for this project via the bash  [`./bin/install_aws_cli`]
+
+
+[AWS CLI Env Vars]
+We can check if our AWS credentials are configured correctly by runing the following AWS CLI command: (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+```sh
+aws sts get-caller-identity
+```
