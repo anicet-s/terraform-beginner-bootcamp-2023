@@ -44,3 +44,12 @@ We can check if our AWS credentials are configured correctly by runing the follo
 ```sh
 aws sts get-caller-identity
 ```
+
+## Terraform Basics
+
+### Terraform Registry
+
+Terraform sources their providers and modules from the Terraform registry which is located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** are interfaces to APIs that will allow you to create resources in Terraform
+- **Modules** are a way to make large amounts of Terraform code modular, portable and sharable.
