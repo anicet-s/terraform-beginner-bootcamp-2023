@@ -30,6 +30,10 @@ output "bucket_name_random"{
     value =random_string.bucket_name.id
 }
 
+resource "aws_bucket" "my_bucket"{
+  
+}
+
 
 
 
