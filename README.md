@@ -53,3 +53,8 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 - **Providers** are interfaces to APIs that will allow you to create resources in Terraform
 - **Modules** are a way to make large amounts of Terraform code modular, portable and sharable.
+
+#### Terraform Destroy
+`terraform destroy`
+This will destroy resources. Auto-approving can be added to this command using --auto-approve. 
+
