@@ -58,3 +58,8 @@ Terraform sources their providers and modules from the Terraform registry which 
 `terraform destroy`
 This will destroy resources. Auto-approving can be added to this command using --auto-approve. 
 
+## Issues with Terraform Cloud Login and Gitpod Workspace
+When attempting to run `terraform login`, it will launch bash in a wiswig view to generate a token. However, this does not work as expected. The workaround is to manually log in to app.terraform.io in a browser initially, run `terraform login`, exit the wiswig view using Ctrl+C, and generate the token manually from the pop window that will display from app.terraform.io application. The next step is to copy the token value from app.terraform.io in the terminal after being prompted using:
+```Token for app.terraform.io:
+    Enter a value:```
+

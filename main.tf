@@ -1,14 +1,10 @@
 
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.31.0"
-    }
+  cloud {
+    organization = "my-asa-org"
 
-    random = {
-      source = "hashicorp/random"
-      version = "3.6.0"
+    workspaces {
+      name = "terra-house-1"
     }
   }
 }
