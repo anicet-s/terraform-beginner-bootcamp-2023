@@ -7,15 +7,15 @@ terraform {
       name = "terra-house-1"
     }
   }
+
+
 }
 
-provider "aws" {
-  # Configuration options
-}
 
-provider "random" {
-  # Configuration options
-}
+
+
+
+
 
 resource "random_string" "bucket_name" {
   lower = true
@@ -24,13 +24,12 @@ resource "random_string" "bucket_name" {
   special          = false
 }
 
-output "bucket_name_random"{
-    value =random_string.bucket_name.id
-}
+
 
 resource "aws_s3_bucket" "my_bucket" {
   bucket = random_string.bucket_name.id
   tags = {
+    UserUuid    = var.user_uuid
     Name        = "My bucket"
     Environment = "Dev"
   }

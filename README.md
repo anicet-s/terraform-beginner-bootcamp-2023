@@ -1,6 +1,23 @@
 # Terraform Beginner Bootcamp 2023
 
-##Semantic versioning:mage:
+
+## Table of Content
+
+- [Semantic Versioning](#semantic-versioning)
+- [Install the Terraform CLI](#install-the-terraform-cli)
+    - [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+    - [Considerations for Linux Distribution](#considerations-for-linux-distribution)
+    - [Working with Env Vars](#working-with-env-vars)
+    - [AWS CLI Installation](#aws-cli-installation)
+- [Terraform Basics](#terraform-basics)
+    - [Terraform Registry](#terraform-registry)
+    - [Terraform Destroy](#terraform-destroy)
+- [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
+
+
+
+
+## Semantic versioning
 
 This project is going to utilize semantic versioning for its tagging.
 [sermver.org]https://semver.org/
