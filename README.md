@@ -1,6 +1,23 @@
 # Terraform Beginner Bootcamp 2023
 
-##Semantic versioning:mage:
+
+## Table of Content
+
+- [Semantic Versioning](#semantic-versioning)
+- [Install the Terraform CLI](#install-the-terraform-cli)
+    - [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+    - [Considerations for Linux Distribution](#considerations-for-linux-distribution)
+    - [Working with Env Vars](#working-with-env-vars)
+    - [AWS CLI Installation](#aws-cli-installation)
+- [Terraform Basics](#terraform-basics)
+    - [Terraform Registry](#terraform-registry)
+    - [Terraform Destroy](#terraform-destroy)
+- [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
+
+
+
+
+## Semantic versioning
 
 This project is going to utilize semantic versioning for its tagging.
 [sermver.org]https://semver.org/
@@ -62,4 +79,7 @@ This will destroy resources. Auto-approving can be added to this command using -
 When attempting to run `terraform login`, it will launch bash in a wiswig view to generate a token. However, this does not work as expected. The workaround is to manually log in to app.terraform.io in a browser initially, run `terraform login`, exit the wiswig view using Ctrl+C, and generate the token manually from the pop window that will display from app.terraform.io application. The next step is to copy the token value from app.terraform.io in the terminal after being prompted using:
 ```Token for app.terraform.io:
     Enter a value:```
+
+[] Set up directory structure for our module
+[] Import our s3 bucket into the module 
 
