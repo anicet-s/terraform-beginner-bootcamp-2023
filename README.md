@@ -80,3 +80,6 @@ When attempting to run `terraform login`, it will launch bash in a wiswig view t
 ```Token for app.terraform.io:
     Enter a value:```
 
+[] Set up directory structure for our module
+[] Import our s3 bucket into the module 
+

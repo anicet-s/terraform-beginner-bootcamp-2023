@@ -1,3 +1,3 @@
-output "bucket_name_random"{
-    value =random_string.bucket_name.id
+output "instance_id" {
+  value = data.aws_ami.my_linux_ami.id
 }

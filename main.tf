@@ -1,4 +1,3 @@
-
 terraform {
   cloud {
     organization = "my-asa-org"
@@ -7,7 +6,16 @@ terraform {
       name = "terra-house-1"
     }
   }
-
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "3.6.3"
+    }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.84.0"
+    }
+  }
 
 }
 
@@ -15,26 +23,14 @@ terraform {
 
 
 
-
-
-resource "random_string" "bucket_name" {
-  lower = true
-  upper = false
-  length           = 20
-  special          = false
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
 }
 
-
-
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = random_string.bucket_name.id
-  tags = {
-    UserUuid    = var.user_uuid
-    Name        = "My bucket"
-    Environment = "Dev"
+data "aws_ami" "my_linux_ami" {
+  most_recent = true
+  filter {
+    name   = "image-id"
+    values = ["ami-053a45fff0a704a47"]
   }
 }
-
-
-
-
