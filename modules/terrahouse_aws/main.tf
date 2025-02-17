@@ -55,14 +55,14 @@ resource "aws_s3_bucket_website_configuration" "example" {
 }
 
 resource "aws_s3_object" "object" {
-  bucket = aws_s3_bucket.my_bucket
+  bucket = aws_s3_bucket.my_bucket.bucket
   key    = "index.html"
-  source = "${path.module.public}"
+  source = "modules/terrahouse_aws/public"
 
   # The filemd5() function is available in Terraform 0.11.12 and later
   # For Terraform 0.11.11 and earlier, use the md5() function and the file() function:
   # etag = "${md5(file("path/to/file"))}"
-  etag = filemd5("~/index.html")
+  etag = filemd5("modules/terrahouse_aws/public/index.html")
 }
 
 
